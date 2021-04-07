@@ -1,0 +1,121 @@
+page{
+    background-color:#F8F8F8;
+}
+.content{
+    margin: 0px auto;
+    .coupon{
+        display: flex;
+        padding: 30rpx 20rpx 0rpx 20rpx;
+        // margin-bottom: 30rpx;
+        .coupon_left{
+            padding: 40rpx 20rpx;
+            display: flex;
+            width: 70%;
+            height: 200rpx;
+            position: relative;
+            border-radius: 10rpx 0rpx 0rpx 10rpx;
+            background:
+              radial-gradient(circle at right top, transparent 20rpx, #fff 0) top right /100% 51% no-repeat,
+              radial-gradient(circle at right bottom, transparent 20rpx, #fff 0) bottom right /100% 51% no-repeat;
+            filter: drop-shadow(6rpx 6rpx 6rpx rgba(0,0,0,.1));
+            margin-right: 5rpx;
+            .coupon_left_wrap{
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                image{
+                    width: 75%;
+                }
+            }
+            .coupon_left_info{
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content:space-between;
+                font-size: 24rpx;
+                .info_hd{
+                    font-weight: 500;
+                }
+                .info_bd{
+                    font-size: 20rpx;
+                    color: #979797;
+                }
+                .info_td{
+                    color:var(--bulueColor);
+                    margin-top: 8rpx;
+                    text{
+                        font-size: 44rpx;
+                        color: var(--bulueColor);
+                    }
+                }
+            }
+        }
+        .coupon_left::before{
+            content: '';
+        height: 77px;
+        border: 1px dashed #fff;
+        position: absolute;
+        right: -4rpx;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        }
+        .coupon_right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 200rpx;
+            position: relative;
+            background:
+            radial-gradient(circle at left top, transparent 10px,  #fff 0) top left / 100% 51% no-repeat,
+              radial-gradient(circle at left bottom, transparent 10px,  #fff 0) bottom left /100% 51% no-repeat;
+            filter: drop-shadow(6rpx 6rpx 6rpx rgba(0,0,0,.1));
+            .coupon_right_get{
+                background-color: #F96400;
+                padding: 15rpx;
+                border-radius: 24rpx 24rpx 24rpx 24rpx;
+                font-size: 26rpx;
+                color: #fff;
+            }
+            .efficacy{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content:center;
+                image{
+                    width: 70%;
+                }
+            }
+        }
+        .coupon_right::after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width:9rpx;
+            top: 0;
+            right:  -7rpx;
+            background-image: linear-gradient(to bottom, #fff 10rpx, transparent 10rpx, transparent),
+            radial-gradient(20px circle at 10rpx 20rpx, transparent 10rpx, #fff 10rpx);
+            background-size: 10rpx 24rpx;
+        }
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100rpx;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        navigator{
+            text-align: center;
+            line-height: 100rpx;
+            width: 100%;
+            height: 100%;
+            color: var(--bulueColor);
+        }
+    }
+}

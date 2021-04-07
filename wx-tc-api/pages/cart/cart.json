@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText":"批发售货订单上传",
+  "navigationBarTextStyle":"white",
+  "navigationBarBackgroundColor":"#1A75CE",
+    "usingComponents": {
+      "slide-delete": "../../components/slide-delete/index"
+    }
+  }

@@ -1,0 +1,34 @@
+
+<tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="order_all">
+            <view class="order_all_list">
+                <view class="all_list_bd">
+                    <text >昨天 16:52:42</text>
+                    <text >已取消</text>
+                </view>
+                <view class="all_list_hd">北京五棵松分店</view>
+                <view class="all_list_td">
+                    <text class="td_item">共 <text >1</text> 件商品</text>
+                    <text class="td_item2">合计<text > ￥2.50</text></text>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+        <view class="">
+            2
+        </view>
+    </block>
+    <block wx:if="{{tabs[2].isActive}}">
+        <view class="">
+            3
+        </view>
+    </block>
+    <block wx:if="{{tabs[3].isActive}}">
+        <view class="">
+            4
+        </view>
+    </block>
+</tabs>
+

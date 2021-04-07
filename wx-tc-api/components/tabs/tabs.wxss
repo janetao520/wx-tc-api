@@ -1,0 +1,18 @@
+.title{
+    display: flex;
+    background-color: #fff;
+    border-bottom: 5rpx solid #EBEBEB;
+    color: #B5B5B5;
+}
+.title_item{
+    flex: 1;
+    padding: 20rpx;
+    margin: 0rpx 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active{
+    color: var(--bulueColor);
+    border-bottom: 4rpx solid var(--bulueColor);
+}

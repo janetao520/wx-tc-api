@@ -1,0 +1,29 @@
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                 <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="weui-search-bar__input" bindinput="barcode" name="scanCodeMsg" value='{{scanCodeMsg}}' placeholder="请输入商品编码或条码"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="weui-search-bar__cancel-btn" bindtap='search'>确定</view>
+        </view>
+    </view>
+
+    <view class="a1" wx:if="{{show}}" >
+      <view class="item" >
+        <view >商品编号：{{goodscode}}</view>
+        <view>商品条码：{{goodsBarcode}}</view>
+        <view>商品名称：{{goodsName}}</view>
+        <view>商品规格：{{goodsSpec}}</view>
+        <view>商品单位：{{goodsUnit}}</view>
+        <view>商品批发价格：{{goodsPfprice}} <text wx:if="{{goodsPfprice>=0}}">元</text></view>
+    </view>
+    <view class="add">
+      <view class="addshop" bindtap="addshop" style="display:flex;justify-content:center;">添加</view>
+    </view>    
+  </view>
+</view>

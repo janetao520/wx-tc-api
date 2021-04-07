@@ -1,0 +1,50 @@
+page {
+  background-color: #F8F8F8;
+}
+
+.order_all .order_all_list {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+.order_all .order_all_list .all_list_bd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_all .order_all_list .all_list_hd {
+  margin: 10rpx 0rpx 20rpx 0rpx;
+  color: #B5B5B5;
+}
+
+.order_all .order_all_list .all_list_td {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_all .order_all_list .all_list_td .td_item {
+  color: #B5B5B5;
+}
+
+.order_all .order_all_list .all_list_td .td_item text {
+  color: #000;
+}
+
+.order_all .order_all_list .all_list_td .td_item::after {
+  content: "\e633";
+  font-family: "iconfont";
+  font-size: 24rpx;
+  position: absolute;
+  top: 9rpx;
+  left: 144rpx;
+  color: #B5B5B5;
+}
+
+.order_all .order_all_list .all_list_td .td_item2 text {
+  color: #F47B20;
+}

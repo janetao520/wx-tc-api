@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 位置 -->
+  <view class="location">
+    <text class="iconfont icon-jiazai location_icon"></text>
+    <text class="location_titme">  厚街天厨店</text>
+    <text class="iconfont icon-jiantou"></text>
+  </view>
+  <!-- 扫商品 -->
+  <view class="sweep">
+    <!-- 上部分 -->
+    <view class="start_sweep">
+      <view class="start_sweep_shoop">
+        <view>扫商品</view>
+        <view>扫描商品条码, 查找商品信息</view>
+      </view>
+      <view class="start_sweep_icon">
+        <view class="start_icon" bindtap="hanleSweep">
+          <view class="child">
+            <view class="iconfont icon-saomagou"></view>
+            <view>开始扫码</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 下部分 -->
+    <view class="start_sweep_nav">
+      <view bindtap="handleScan">
+        <text class="iconfont icon-gouwulan"></text>
+        <text>批发售货</text>
+      </view>
+      
+      <view>
+        <text class="iconfont icon-erweima2"></text>
+        <text>门店要货</text>
+      </view>
+
+      <view bindtap="handleOrder">
+        <text class="iconfont icon-dingdan"></text>
+        <text>店间调拨</text>
+      </view>
+
+    </view>
+    <!-- 隐藏部分 -->
+    <view class="strat_hide" wx:if="{{flag}}">
+      <view bindtap="handleDiscounts">
+        <text class="iconfont icon-youhuiquan"></text>
+        <text>我的优惠券</text>
+      </view>
+      <view>
+        <text class="iconfont icon-lipinka"></text>
+        <text>礼品卡礼单</text>
+      </view>
+    </view>
+    <view class="strat_show">
+      <text bindtap="handleShow" class="zhankai1">
+        {{flag?'收起':'展开'}}
+        <text class="iconfont {{flag?'icon-sanjiaoshang':'icon-sanjiao_xia'}} zhankai" ></text>
+      </text>
+    </view>
+  </view>
+
+  
+  <!-- footer -->
+
+</view>

@@ -1,0 +1,105 @@
+page {
+  font-size: 26rpx;
+}
+
+.content .item_tap {
+  padding: 10rpx 20rpx;
+  background-color: #FEF5EE;
+}
+
+.content .fapiao {
+  position: relative;
+  padding: 20rpx 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .fapiao .fapiao_icon {
+  margin-right: 40rpx;
+}
+
+.content .fapiao .fapiao_icon::after {
+  content: "\e633";
+  font-family: "iconfont";
+  font-size: 24rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 12rpx;
+}
+
+.content .shoop {
+  padding: 0rpx 20rpx;
+}
+
+.content .shoop view:nth-child(1) {
+  border-top: none;
+}
+
+.content .shoop .shoopList {
+  padding: 20rpx 0px;
+  border-top: 1rpx solid #ccc;
+}
+
+.content .shoop .shoopList .shoop_proce {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+
+.content .prices {
+  padding: 20rpx 20rpx;
+}
+
+.content .prices .prices_num {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.content .prices .prices_num .orgColor {
+  color: #F47B20;
+}
+
+.content .prices .prices_disc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .prices .prices_disc .discColor {
+  color: var(--bulueColor);
+}
+
+.footer {
+  height: 120rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #cccccc;
+}
+
+.footer .number {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 40rpx;
+}
+
+.footer .pay {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F47B20;
+  color: #ffffff;
+}
+
+.hx {
+  height: 10rpx;
+  background-color: #f4f4f4;
+}
+
+.discColor {
+  color: #F47B20;
+}

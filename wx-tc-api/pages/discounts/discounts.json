@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tabs":"../../components/tabs/tabs"
+  },
+  "navigationBarTitleText":"扫码购",
+  "navigationBarTextStyle":"white",
+  "navigationBarBackgroundColor":"#1A75CE"
+}

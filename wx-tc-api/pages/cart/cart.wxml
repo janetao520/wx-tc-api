@@ -1,0 +1,154 @@
+
+
+<view class="shoop">
+    <form bindsubmit='doOrder' bindsubmit="bindCheckout">
+
+<view class="container carts-list" bindtap='onTapUnfold'  style="{{show?'display: none':''}}">
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:90%;">
+        <text class="carts-title">单据信息</text>
+    </view>
+        <image style="margin-top: 5px;width: 30rpx;height: 30rpx;" src="/img/right.png"></image>
+</view> 
+</view>
+<view class="container carts-list" bindtap='onTapFolding'  style="{{show?'':'display: none'}}">
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:90%;">
+        <text class="carts-title">单据信息</text>
+    </view>
+        <image style="margin-top: 5px;width: 30rpx;height: 30rpx;" src="/img/up.png"></image>
+</view> 
+</view>
+
+<view class="container carts-list" style="{{show?'':'display: none'}}">
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">批发订单号</text>
+    </view>
+    <view class="title">
+        <input name="billno" value="{{billno}}" disabled="disabled" />
+    </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">组织编码</text>
+    </view>
+    <picker bindchange="mySelect" value="{{index}}" range="{{grades}}" >
+        {{grade_name}}
+    </picker>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">批发客户编码</text>
+    </view>
+    <view wx:if="{{pccustcodeSelect}}">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{pccustcodeStrArr}}">
+            {{pccustcodeStr}}
+        </picker>
+   </view>
+   <view wx:if="{{!pccustcodeSelect}}">
+    请先选择组织编码
+ </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">部门编码</text>
+    </view>
+    <view class="title">
+        <input name="depcode" value="1" />
+    </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">订单日期</text>
+    </view>
+    <view class="title">
+        <input name="date" value="{{date}}" disabled="disabled" />
+    </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">订单时间</text>
+    </view>
+    <view class="title">
+        <input name="time" value="{{time}}" disabled="disabled" />
+    </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">操作员编号</text>
+    </view>
+    <view class="title">
+        <input name="staffcode" />
+    </view>
+</view>
+<view class="carts-item-2"> 
+    <view class="carts-text" style="width:30%;">
+        <text class="carts-title">备注</text>
+    </view>
+    <view class="title">
+        <input name="remark" value="" />
+    </view>
+</view>
+</view>
+<view class="product-container" style="margin-bottom: 150rpx;">
+  <view class="product-list">
+    <view class="product-item" wx:for="{{carts}}" wx:for-index="index" wx:key="{{item.id}}">
+      <slide-delete bindaction="handleSlideDelete" data-index="{{index}}">
+        <view class="product-item-wrap">
+            <icon wx:if="{{item.selected}}" type="success_circle"    size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+        <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{index}}"/>
+          <view class="product-movable-item">
+            <view>{{item.goodsName}}</view>
+            <view  class="product-movable-item-name">商品编号：{{item.goodscode}}</view>
+            <view  class="product-movable-item-name">商品条码：{{item.goodsBarcode}}</view>
+            <view class="carts-price"  data-item="{{item}}"   bindtap="setMoney" data-index="{{index}}" >￥{{item.goodsPfprice}}</view>
+          </view>
+          <view class="stepper">
+           <!-- 减号 -->
+           <text class="{{minusStatuses[index]}}" data-index="{{index}}" data-index="{{index}}" bindtap="bindMinus" data-cartid="{{item.scanCodeMsg}}" data-goodsPfprice="{{item.goodsPfprice}}">-</text>
+            <!-- 数值 -->
+             <input type="number" bindchange="bindManual" data-index="{{index}}"  value="{{item.num}}" />
+            <!-- 加号 -->
+             <text class="normal" data-index="{{index}}" bindtap="bindPlus" data-cartid="{{item.scanCodeMsg}}" data-price="{{item.goodsPfprice}}">+</text>
+          </view>
+        </view>
+      </slide-delete>
+    </view>
+  </view>
+</view>
+<block wx:if="{{isShowConfirm}}">
+  <view class='toast-box'>
+    <view class='toastbg'></view>
+    <view class='showToast'>
+        <view class='toast-title'>
+            <text>修改单价</text>
+        </view>
+        <view class='toast-main'>
+            <view class='toast-input'>
+                <input type='number' placeholder='请输入要修改的金额' bindinput='setValue' value="{{money}}" ></input>
+            </view>
+        </view>
+        <view class='toast-button'>
+            <view class='button1'>
+                <button catchtap='cancel' style="width:100%;">取消</button>
+            </view>
+            <view class='button2'>
+                <button catchtap='confirmAcceptance'  style="width:100%;">确定</button>
+            </view>
+        </view>
+    </view>
+</view>
+</block>
+<!--底部-->
+<view class="close" style="z-index: 500">
+   <view class="close_sm">
+    <view class="close_tj"></view>
+    <view class="close_icon" bindtap="hanleSweep"></view>
+    <view class="close_txm">扫不出来? 试试<text bindtap="goOrderInput">输入条形码</text></view>
+   </view>
+       <view class="close_hj">合计: <text> {{total}}</text></view>
+       <button form-type='submit' class="close_js" >订单上传</button>
+</view>
+</form>
+</view>

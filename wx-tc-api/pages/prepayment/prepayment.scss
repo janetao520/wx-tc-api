@@ -1,0 +1,91 @@
+page{
+    font-size: 26rpx;
+}
+.content{
+    .item_tap{
+        padding: 10rpx 20rpx;
+        background-color: #FEF5EE;
+    }
+    .fapiao{
+        position: relative;
+        padding: 20rpx 20rpx;
+        display: flex;
+        justify-content: space-between;
+        .fapiao_icon{
+            margin-right: 40rpx;
+        }
+        .fapiao_icon::after{
+            content: "\e633";
+            font-family: "iconfont"; // 必须要加，不加的话显示异常
+            font-size: 24rpx; // 样式和位置，自设
+            position: absolute;
+            top: 30rpx;
+            right: 12rpx;
+        }
+    }
+    .shoop{
+        padding: 0rpx 20rpx;
+        view:nth-child(1){
+            border-top: none;
+        }
+    .shoopList{
+        padding: 20rpx 0px;
+        border-top: 1rpx solid #ccc;
+        .shoop_proce{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40rpx;
+        }
+        
+    }
+    }
+    .prices{
+        padding: 20rpx 20rpx;
+        .prices_num{
+            display: flex;
+        justify-content: space-between;
+        margin-bottom: 20rpx;
+            .orgColor{
+                color: #F47B20;
+            }
+        }
+        .prices_disc{
+            display: flex;
+            justify-content: space-between;
+            .discColor{
+                color: var(--bulueColor);
+            }
+        }
+    }
+}
+.footer{
+    height: 120rpx;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1rpx solid #cccccc;
+    .number{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        padding-left: 40rpx;
+    }
+    .pay{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F47B20;
+        color: #ffffff;
+    }
+}
+.hx{
+    height: 10rpx;
+    background-color:#f4f4f4;//#F8F8F8
+}
+.discColor{
+    color: #F47B20;
+}

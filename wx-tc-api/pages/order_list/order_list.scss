@@ -1,0 +1,48 @@
+page{
+    background-color: #F8F8F8;
+}
+.order_all{
+    .order_all_list{
+        padding: 20rpx;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        font-size: 26rpx;
+        margin-bottom: 10rpx;
+        .all_list_bd{
+            display: flex;
+            justify-content: space-between;
+        }
+        .all_list_hd{
+            margin: 10rpx 0rpx 20rpx 0rpx;
+            // font-size: 26rpx;
+            color: #B5B5B5;
+        }
+        .all_list_td{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            // color: #B5B5B5;
+            .td_item{
+                color: #B5B5B5;
+                text{
+                    color: #000;
+                }
+            }
+            .td_item::after{
+                content: "\e633";
+                font-family: "iconfont"; // 必须要加，不加的话显示异常
+                font-size: 24rpx; // 样式和位置，自设
+                position: absolute;
+                top: 9rpx;
+                left: 144rpx;
+                color: #B5B5B5;
+            }
+            .td_item2{
+                text{
+                    color: #F47B20;
+                }
+            }
+        }
+    }
+}

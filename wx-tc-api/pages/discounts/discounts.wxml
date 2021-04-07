@@ -1,0 +1,47 @@
+
+<tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view class="content" hover-class="none" hover-stop-propagation="false">
+            <view class="coupon">
+                <view class="coupon_left">
+                    <view class="coupon_left_wrap"><image src="http://qc1yb7690.bkt.clouddn.com/youhuijuan1.jpg" mode="widthFix"> </image></view>
+                    <view class="coupon_left_info">
+                        <view>
+                            <text class="info_hd">美赞臣伯睿2/3段奶粉</text>
+                            <text class="info_bd">2020/06/19-06/21</text>
+                        </view>
+                        <view class="info_td"><text >8.8</text>折 满3件即享</view>
+                    </view>
+                </view>
+                <view class="coupon_right">
+                    <view class="coupon_right_get">立即领取</view>
+                </view>
+            </view>
+             <view class="coupon">
+                <view class="coupon_left">
+                    <view class="coupon_left_wrap"><image src="http://qc1yb7690.bkt.clouddn.com/youhuijuan1.jpg" mode="widthFix"> </image></view>
+                    <view class="coupon_left_info">
+                        <view>
+                            <text class="info_hd">美赞臣伯睿2/3段奶粉</text>
+                            <text class="info_bd">2020/06/19-06/21</text>
+                        </view>
+                        <view class="info_td"><text >8.8</text>折 满3件即享</view>
+                    </view>
+                </view>
+                <view class="coupon_right">
+                    <view class="coupon_right_get">立即领取</view>
+                </view>
+            </view>
+            <view class="footer">
+                <view class="footer_item">限时秒杀</view>
+                <view class="footer_slicer">|</view>
+                <view class="footer_text">我的优惠券</view>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+            3
+        </view>
+    </block>
+</tabs>

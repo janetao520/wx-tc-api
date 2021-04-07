@@ -1,0 +1,33 @@
+<view class="content">
+    <view class="item_tap">如需要购物袋, 可返回购物车选择</view>
+    <view class="fapiao">
+        <text>发票</text>
+        <text class="fapiao_icon">不要发票</text>
+    </view>
+    <view class="hx"></view>
+
+    <view class="shoop" >
+        <view class="shoopList" wx:for="{{Orderlist}}" wx:key="index">
+            <view>{{item.Product.name}}</view>
+        <view class="shoop_proce">
+            <text>￥{{item.Product.price}}</text>
+            <text>x{{item.number}}</text>
+        </view>
+        </view>
+    </view>
+    <view class="hx"></view>
+    <view class="prices">
+    <view class="prices_num">
+        <view>商品金额</view>
+        <view class="orgColor">￥{{total}}</view>
+    </view>
+    <view class="prices_disc">
+        <view>优惠合计</view>
+        <view class="discColor">-￥0.00</view>
+    </view>
+</view>
+</view>
+<view class="footer">
+    <view class="number">合计: <text class="discColor">{{total}}</text></view>
+    <view class="pay" bindtap="handlePay">支付</view>
+</view>
